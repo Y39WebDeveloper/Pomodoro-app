@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Pomodoro app</title>
+</head>
+<body>
+  <div class="header">
+    <div class="logo"><img src="assets/logo.svg" alt=""></div>
+    <ul class="nav">
+      <li class="active">pomodoro</li>
+      <li>short break</li>
+      <li>long break</li>
+    </ul>
+  </div>
+  <div class="timer">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="360px" height="360px">
+      <circle id="circle" cx="180" cy="180" r="170" stroke-linecap="round"  />
+    </svg>
+    <div class="timer-inner">
+      <div class="time" id="time">
+        00:00
+      </div>
+      <div class="pause">Pause</div>
+    </div>
+  </div>
+  <div class="settings-icon" id="settingsIcon">
+    <img src="assets/icon-settings.svg" alt="">
+  </div>
+  <div class="settings-container" id="settingsContainer">
+    <div class="settings">
+      <h2>Settings <span id="closeSettings"><img src="assets/icon-close.svg" alt="" ></span></h2>
+      <div class="times">
+        <h4>TIME (MINUTES)</h4>
+        <div class="inputs">
+          <div class="input">
+            <label for="pomodoro">pomodoro</label>
+            <div class="inp">
+              <input type="number" name="" id="pomodoro" value="25">
+              <div class="btns">
+              <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()"><img src="assets/icon-arrow-up.svg" alt=""></button>
+              <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()"><img src="assets/icon-arrow-down.svg" alt=""></button>
+            </div>
+            </div>
+          </div>
+          <div class="input">
+            <label for="shortBreak">short break</label>
+            <div class="inp">
+              <input type="number" name="" id="shortBreak" value="5">
+              <div class="btns">
+              <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()"><img src="assets/icon-arrow-up.svg" alt=""></button>
+              <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()"><img src="assets/icon-arrow-down.svg" alt=""></button>
+            </div>
+            </div>
+          </div>
+          <div class="input">
+            <label for="longBreak">long break</label>
+            <div class="inp">
+              <input type="number" name="" id="longBreak" value="15">
+              <div class="btns">
+              <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()"><img src="assets/icon-arrow-up.svg" alt=""></button>
+              <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()"><img src="assets/icon-arrow-down.svg" alt=""></button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fonts">
+        <h4>FONT</h4>
+        <ul id="fonts">
+          <li class="active">Aa</li>
+          <li style="font-family: 'Roboto Slab', serif;">Aa</li>
+          <li style="font-family: 'Space Mono',monospace;">Aa</li>
+        </ul>
+      </div>
+
+      <div class="colors">
+        <h4>COLOR</h4>
+        <ul id="colors">
+          <li class="active" style="background-color: #F87070;"></li>
+          <li style="background-color: #70F3F8;"></li>
+          <li style="background-color: #D881F8;"></li>
+        </ul>
+      </div>
+      <button id="applyBtn">Apply</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
